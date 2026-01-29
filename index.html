@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Arduino & ESP32 Encyclopedia</title>
+    <link rel="stylesheet" href="css.css">
+</head>           
+<body>
+    <header>
+        <div class="logo">ARDUINO_CORE <span>v2.0</span></div>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search everything..." onkeyup="searchDatabase()">
+        </div>
+        <nav class="top-nav">
+            <button onclick="loadTopic('home')" class="nav-btn active">Home</button>
+            <button onclick="loadTopic('boards')" class="nav-btn">Boards</button>
+            <button onclick="loadTopic('functions')" class="nav-btn">Reference</button>
+            <button onclick="loadTopic('esp32')" class="nav-btn">ESP32 Core</button>
+            <button onclick="loadTopic('sensors')" class="nav-btn">Sensors</button>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <h3 id="sidebar-title">Categories</h3>
+            <ul id="sidebar-list"></ul>
+        </aside>
+        <main id="content-display">
+            <div class="welcome-screen">
+                <h1>Welcome to the Core</h1>
+                <p>Select a category or search for a specific command to begin.</p>
+            </div>
+        </main>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>

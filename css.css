@@ -1,0 +1,85 @@
+:root {
+    --arduino-teal: #00878F;
+    --esp-purple: #92278f;
+    --dark-bg: #1e1e1e;
+    --sidebar-bg: #252526;
+    --text-main: #d4d4d4;
+    --accent: #007acc;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: var(--dark-bg);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background: var(--sidebar-bg);
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+}
+
+.logo { font-weight: bold; color: var(--arduino-teal); font-size: 1.2rem; }
+.logo span { color: #666; font-size: 0.8rem; }
+
+#search-input {
+    background: #3c3c3c;
+    border: 1px solid #555;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    width: 250px;
+}
+
+.top-nav .nav-btn {
+    background: transparent;
+    border: none;
+    color: #999;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.top-nav .nav-btn.active { color: white; border-bottom: 2px solid var(--arduino-teal); }
+
+.main-container { display: flex; flex: 1; overflow: hidden; }
+
+.sidebar {
+    width: 280px;
+    background: var(--sidebar-bg);
+    border-right: 1px solid #333;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.sidebar li {
+    padding: 12px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.sidebar li:hover { background: #37373d; color: var(--arduino-teal); }
+
+main { flex: 1; padding: 40px; overflow-y: auto; line-height: 1.6; }
+
+code {
+    background: #000;
+    color: #dcdcaa;
+    padding: 15px;
+    display: block;
+    border-radius: 5px;
+    margin: 15px 0;
+    font-family: 'Consolas', monospace;
+}
+
+h1 { color: white; border-bottom: 2px solid var(--arduino-teal); padding-bottom: 10px; }
+b { color: var(--arduino-teal); }
