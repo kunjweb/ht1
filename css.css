@@ -1,85 +1,68 @@
 :root {
-    --arduino-teal: #00878F;
-    --esp-purple: #92278f;
-    --dark-bg: #1e1e1e;
-    --sidebar-bg: #252526;
-    --text-main: #d4d4d4;
-    --accent: #007acc;
+    --primary: #00979D;
+    --accent: #006468;
+    --bg: #0f172a;
+    --glass: rgba(255, 255, 255, 0.05);
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background: var(--dark-bg);
-    color: var(--text-main);
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-header {
-    background: var(--sidebar-bg);
-    padding: 10px 25px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #333;
-}
-
-.logo { font-weight: bold; color: var(--arduino-teal); font-size: 1.2rem; }
-.logo span { color: #666; font-size: 0.8rem; }
-
-#search-input {
-    background: #3c3c3c;
-    border: 1px solid #555;
+    background: radial-gradient(circle at top right, #1e293b, #0f172a);
     color: white;
-    padding: 8px 15px;
-    border-radius: 4px;
-    width: 250px;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.top-nav .nav-btn {
-    background: transparent;
-    border: none;
-    color: #999;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: 0.2s;
+.glass-container {
+    width: 95vw;
+    height: 90vh;
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
-
-.top-nav .nav-btn.active { color: white; border-bottom: 2px solid var(--arduino-teal); }
-
-.main-container { display: flex; flex: 1; overflow: hidden; }
 
 .sidebar {
     width: 280px;
-    background: var(--sidebar-bg);
-    border-right: 1px solid #333;
-    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
     overflow-y: auto;
 }
 
-.sidebar li {
-    padding: 12px;
+.logo { font-size: 24px; font-weight: bold; color: var(--primary); margin-bottom: 40px; }
+.logo span { color: white; margin-left: 5px; }
+
+nav h3 { font-size: 12px; text-transform: uppercase; color: #64748b; margin: 20px 0 10px; }
+nav ul { list-style: none; padding: 0; }
+nav li { 
+    padding: 12px; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    font-size: 14px; 
     margin-bottom: 5px;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 0.9rem;
+}
+nav li:hover { background: var(--primary); }
+
+.content-area { flex: 1; padding: 50px; overflow-y: auto; }
+#searchBar {
+    width: 100%;
+    background: var(--glass);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 25px;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 40px;
 }
 
-.sidebar li:hover { background: #37373d; color: var(--arduino-teal); }
-
-main { flex: 1; padding: 40px; overflow-y: auto; line-height: 1.6; }
-
-code {
-    background: #000;
-    color: #dcdcaa;
-    padding: 15px;
-    display: block;
-    border-radius: 5px;
-    margin: 15px 0;
-    font-family: 'Consolas', monospace;
-}
-
-h1 { color: white; border-bottom: 2px solid var(--arduino-teal); padding-bottom: 10px; }
-b { color: var(--arduino-teal); }
+.hero h1 { font-size: 48px; background: linear-gradient(to right, #00979D, #5eead4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.card { background: rgba(0,0,0,0.3); padding: 30px; border-radius: 20px; line-height: 1.6; }
+pre { background: #000; padding: 20px; border-radius: 10px; color: #5eead4; overflow-x: auto; border-left: 4px solid var(--primary); }
